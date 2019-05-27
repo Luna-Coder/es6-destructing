@@ -100,6 +100,8 @@ const profileUpdate = (profileData) => {
   // do something with these variables
 }
 ```
+In some cases, you can destructure the object in a function argument itself.
+
 This effectively destructures the object sent into the function. This can also be done _in-place_.
 ```js
 const profileUpdate = ({ name, age, nationality, location }) => {
