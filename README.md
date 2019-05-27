@@ -11,11 +11,11 @@ console.log(howMany("string", null, [1, 2, 3], { }));     // You have passed 4 a
 ```
 ES6 introduces the `rest` operator for function parameters. 
 
-With the rest operator, you can create functions that take a variable number of arguments. 
+With the `rest` operator, you can create functions that take a variable number of arguments. 
 
 These arguments are stored in an array that can be accessed later from inside the function.
 
-The rest operator eliminates the need to check the args array and allows us to apply `map()`, `filter()` and `reduce()` on the parameters array.
+The `rest` operator eliminates the need to check the args array and allows us to apply `map()`, `filter()` and `reduce()` on the parameters array.
 
 ___
 
@@ -28,7 +28,7 @@ ES6 introduces the `spread` operator, which allows us to expand arrays and other
 
 `...arr` returns an unpacked array. In other words, it _spreads_ the array.
 
-However, the spread operator only works in-place, like in an argument to a function or in an array literal.
+However, the `spread` operator only works _in-place_, like in an argument to a function or in an array literal.
 
 ___
 
@@ -63,7 +63,7 @@ const [a, b] = [1, 2, 3, 4, 5, 6];
 console.log(a, b);         // 1, 2
 ```
 
-We can also access the value at any index in an array with destructuring by using commas to reach the desired index.
+We can also access the value at any index in an array with `destructuring` by using commas to reach the desired index.
 ```js
 const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
 
@@ -97,7 +97,7 @@ const profileUpdate = (profileData) => {
   // do something with these variables
 }
 ```
-This effectively destructures the object sent into the function. This can also be done in-place.
+This effectively destructures the object sent into the function. This can also be done _in-place_.
 ```js
 const profileUpdate = ({ name, age, nationality, location }) => {
   /* do something with these fields */
