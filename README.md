@@ -21,7 +21,7 @@ ___
 ### Spread Operator to Evaluate Arrays In-Place
 ```js
 const arr = [6, 89, 3, 45];
-const maximus = Math.max(...arr); // returns 89
+const maximus = Math.max(...arr);     // returns 89
 ```
 ES6 introduces the `spread` operator, which allows us to expand arrays and other expressions in places where multiple parameters or elements are expected.
 
@@ -33,14 +33,18 @@ ___
 
 ### Destructuring Assignment to Assign Variables from Objects
 ```js
-let student = { fname: "Erik", lname: "Carr", idNum: 1234 };
+let student = { 
+                fname: "Erik", 
+                lname: "Carr", 
+                idNum: 1234 
+              };
 ```
 
 ES5
 ```js
-let fname = student.fname;
-let lname = student.lname;
-let idNum = student.idNum;
+let fname = student.fname;      // fname = "Erik"
+let lname = student.lname;      // lname = "Carr"
+let idNum = student.idNum;      // idNum = 1234
 ```
 
 ES6
@@ -54,7 +58,7 @@ ___
 ### Destructuring Assignment to Assign Variables from Arrays
 ```js
 const [a, b] = [1, 2, 3, 4, 5, 6];
-console.log(a, b); // 1, 2
+console.log(a, b);         // 1, 2
 ```
 
 We can also access the value at any index in an array with destructuring by using commas to reach the desired index.
