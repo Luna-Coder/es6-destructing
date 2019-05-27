@@ -1,4 +1,4 @@
-# es6-destructing
+# ES6-Destructuring, Spread, & Rest Operators
 
 ### Rest Operator with Function Parameters
 ```js
