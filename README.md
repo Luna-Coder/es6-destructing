@@ -5,6 +5,7 @@
 function howMany(...args) {
   return "You have passed " + args.length + " arguments.";
 }
+
 console.log(howMany(0, 1, 2));                            // You have passed 3 arguments
 console.log(howMany("string", null, [1, 2, 3], { }));     // You have passed 4 arguments.
 ```
@@ -58,12 +59,14 @@ ___
 ### Destructuring Assignment to Assign Variables from Arrays
 ```js
 const [a, b] = [1, 2, 3, 4, 5, 6];
+
 console.log(a, b);         // 1, 2
 ```
 
 We can also access the value at any index in an array with destructuring by using commas to reach the desired index.
 ```js
 const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
+
 console.log(a, b, c);     // 1, 2, 5
 ```
 ES6 makes destructuring arrays as easy as destructuring objects.
@@ -77,6 +80,7 @@ ___
 ### Destructuring Assignment with the Rest Operator to Reassign Array Elements
 ```js
 const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
+
 console.log(a, b);    // 1, 2
 console.log(arr);     // [3, 4, 5, 7]
 ```
