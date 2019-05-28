@@ -1,5 +1,21 @@
 # ES6-Syntax & Features
 
+### Mutatations With const Declarations
+```js
+const arr = [5, 6, 7];
+
+arr = [1, 2, 3];      // throws error, trying to reassign a const declaration
+
+arr[2] = 45;         // works just as it would with an array declared with var or let
+
+console.log(arr);    // returns [5, 6, 45]
+```
+Like all arrays, the array elements of `arr` are mutable. But by using `const` you cannot use the variable identifier `arr` to point to a different array using the assignment operator, `=`.
+
+Objects (including arrays and functions) assigned to a variable using `const` are still mutable. Using the `const` declaration only prevents reassignment of that variable identifier.
+
+___
+
 ### Rest Operator With Function Parameters
 ```js
 function howMany(...args) {
