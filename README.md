@@ -209,7 +209,7 @@ ___
 
 ### Differences Between import And require
 ```js
-import { functionName } from "./file_path_goes_here"      // We can also import variables the same way!
+import { functionName } from "./file_path_goes_here"     // We can also import variables the same way
 ```
 In ES5, the function `require()` was used to import the functions and code in external files and modules. However, as some files and modules are rather large, this method wouldn't be practical in those cases.
 
