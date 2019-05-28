@@ -111,3 +111,38 @@ const profileUpdate = ({ name, age, nationality, location }) => {
 This removes some extra lines and makes our code look neat.
 
 This has the added benefit of not having to manipulate an entire object in a function; only the fields that are needed are copied inside the function.
+
+___
+
+###  Strings using Template Literals
+```js
+const person = {
+  name: "Zodiac Hasbro",
+  age: 56
+};
+
+// Template literal with multi-line and string interpolation
+const greeting = `Hello, my name is ${person.name}!
+I am ${person.age} years old.`;
+
+console.log(greeting); // prints
+// Hello, my name is Zodiac Hasbro!
+// I am 56 years old.
+```
+A new feature of ES6 is the `template literal`. This is a special type of string that makes creating complex strings easier.
+
+Template literals allow you to create multi-line strings and to use string interpolation features to create strings.
+
+___
+
+
+
+
+
+
+
+
+
+
+
+
