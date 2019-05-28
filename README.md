@@ -176,7 +176,7 @@ const person = {
 };
 ```
 
----
+___
 
 ### Class Syntax To Define A Constructor Function
 ES5
@@ -209,7 +209,7 @@ ___
 
 ### Differences Between import And require
 ```js
-import { functionName } from "./file_path_goes_here"     // We can also import variables the same way
+import { functionName } from "./file_path_goes_here";    // We can also import variables the same way
 ```
 In ES5, the function `require()` was used to import the functions and code in external files and modules. However, as some files and modules are rather large, this method wouldn't be practical in those cases.
 
@@ -217,9 +217,57 @@ ES6 gives us a very handy tool known as `import`. Now, we can choose the parts o
 
 Note:
 In most cases, the file path requires a `./` before it; otherwise, node will look in the `node_modules` directory first trying to load it as a dependency.
+
 ___
 
-### 
+### The export Syntax To Reuse A Code Block
+```js
+const capitalizeString = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+export { capitalizeString }      //How to export functions.
+export const foo = "bar";        //How to export variables.
+```
+This is what we refer to as a _named export_. With this, we can import any code we export into another file with the `import` syntax.
+
+When we want some code - a function, or a variable - to be usable in another file, we must export it in order to import it into another file.
+
+If you'd like to compact all your `export` statements into one line, you can take the following approach:
+```js
+const capitalizeString = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+const foo = "bar";
+
+export { capitalizeString, foo }
+```
+
+___
+
+### Import Everything From A File With *
+```js
+import * as myMathModule from "./math_functions";
+
+myMathModule.add(2,3);
+myMathModule.subtract(5,3);
+```
+
+General Format:
+```js
+import * as object_name from "./file_path"
+
+object_name.functionName();
+```
+You may use any name following the `import * as` portion of the statement. 
+
+In order to utilize this method, it requires an object that receives the imported values. From here, you will use the dot notation to call your imported values.
+
+___
+
+
+
 
 
 
