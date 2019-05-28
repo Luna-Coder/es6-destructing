@@ -256,7 +256,7 @@ myMathModule.subtract(5,3);
 
 General Format:
 ```js
-import * as object_name from "./file_path"
+import * as object_name from "./file_path";
 
 object_name.functionName();
 ```
@@ -266,15 +266,33 @@ In order to utilize this method, it requires an object that receives the importe
 
 ___
 
+### Export Fallback With export default
+```js
+export default function add(x,y) {
+  return x + y;
+}
+```
+With a _named export_, you're allowed you to make multiple functions and variables available for use in other files.
 
+There is another `export` syntax you need to know, known as `export default`. 
 
+Usually you will use this syntax if only one value is being exported from a file. It is also used to create a fallback value for a file or module.
 
+Note: 
+Since `export default` is used to declare a fallback value for a module or file, you can only have one value be a default export in each module or file. 
 
+Additionally, you cannot use `export default` with `var`, `let`, or `const`.
 
+___
 
+### Import A Default Export
+```js
+import add from "math_functions";
 
+add(5,4);     // Will return 9
+```
+It is important to note that, to import a `default export`, you need to use a different `import` syntax.
 
+The syntax differs in one key place - the imported value, `add`, is not surrounded by curly braces, `{ }`. 
 
-
-
-
+Unlike exported values, the primary method of importing a `default export` is to simply write the value's name after `import`.
