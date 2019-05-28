@@ -125,7 +125,7 @@ const person = {
 const greeting = `Hello, my name is ${person.name}!
 I am ${person.age} years old.`;
 
-console.log(greeting); // prints
+console.log(greeting);
 // Hello, my name is Zodiac Hasbro!
 // I am 56 years old.
 ```
@@ -135,8 +135,48 @@ Template literals allow you to create multi-line strings and to use string inter
 
 ___
 
+### Concise Object Literal Declarations Using Simple Fields
+ES5
+```js
+const getMousePosition = (x, y) => ({
+  x: x,
+  y: y
+});
+```
+ES6 adds some nice support for easily defining object literals.
 
+ES6 provides the syntactic sugar to eliminate the redundancy of having to write `x: x`. You can simply write `x` once, and it will be converted to `x: x` (or something equivalent) under the hood.
 
+ES6
+```js
+const getMousePosition = (x, y) => ({ x, y });
+```
+
+___
+
+### Concise Declarative Functions with ES6
+ES5
+```js
+const person = {
+  name: "Taylor",
+  sayHello: function() {
+    return `Hello! My name is ${this.name}.`;
+  }
+};
+```
+With ES6, You can remove the `function` keyword and colon altogether when defining functions in objects. Here's an example of this syntax:
+
+ES6
+```js
+const person = {
+  name: "Taylor",
+  sayHello() {
+    return `Hello! My name is ${this.name}.`;
+  }
+};
+```
+
+---
 
 
 
