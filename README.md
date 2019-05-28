@@ -1,6 +1,6 @@
-# ES6-Destructuring, Spread, & Rest Operators
+# ES6-Syntax & Features
 
-### Rest Operator with Function Parameters
+### Rest Operator With Function Parameters
 ```js
 function howMany(...args) {
   return "You have passed " + args.length + " arguments.";
@@ -19,7 +19,7 @@ The `rest` operator eliminates the need to check the args array and allows us to
 
 ___
 
-### Spread Operator to Evaluate Arrays In-Place
+### Spread Operator To Evaluate Arrays In-Place
 ```js
 const arr = [6, 89, 3, 45];
 const maximus = Math.max(...arr);     // returns 89
@@ -32,7 +32,7 @@ However, the `spread` operator only works _in-place_, like in an argument to a f
 
 ___
 
-### Destructuring Assignment to Assign Variables from Objects
+### Destructuring Assignment To Assign Variables From Objects
 ```js
 let student = { 
                 fname: "Erik", 
@@ -56,7 +56,7 @@ The `destructuring` assignment is special syntax for neatly assigning values tak
 
 ___
 
-### Destructuring Assignment to Assign Variables from Arrays
+### Destructuring Assignment To Assign Variables From Arrays
 ```js
 const [a, b] = [1, 2, 3, 4, 5, 6];
 
@@ -77,7 +77,7 @@ Consequently, you cannot pick or choose which elements you want to assign to var
 
 ___
 
-### Destructuring Assignment with the Rest Operator to Reassign Array Elements
+### Destructuring Assignment With The Rest Operator To Reassign Array Elements
 ```js
 const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
 
@@ -93,7 +93,7 @@ The `rest` element only works correctly as the last variable in the list. As in,
 
 ___
 
-### Destructuring Assignment to Pass an Object as a Function's Parameters
+### Destructuring Assignment To Pass An Object As A Function's Parameters
 ```js
 const profileUpdate = (profileData) => {
   const { name, age, nationality, location } = profileData;
@@ -114,7 +114,7 @@ This has the added benefit of not having to manipulate an entire object in a fun
 
 ___
 
-###  Strings using Template Literals
+###  Strings Using Template Literals
 ```js
 const person = {
   name: "Zodiac Hasbro",
@@ -154,7 +154,7 @@ const getMousePosition = (x, y) => ({ x, y });
 
 ___
 
-### Concise Declarative Functions with ES6
+### Concise Declarative Functions With ES6
 ES5
 ```js
 const person = {
@@ -178,7 +178,7 @@ const person = {
 
 ---
 
-### Class Syntax to Define a Constructor Function
+### Class Syntax To Define A Constructor Function
 ES5
 ```js
 var SpaceShuttle = function(targetPlanet){
@@ -206,6 +206,26 @@ const zeus = new SpaceShuttle('Jupiter');
 Notice that the `class` keyword declares a new function, and a `constructor` was added, which would be invoked when `new` is called - to create a new object.
 
 ___
+
+### Differences Between import And require
+```js
+import { functionName } from "./file_path_goes_here"      // We can also import variables the same way!
+```
+In ES5, the function `require()` was used to import the functions and code in external files and modules. However, as some files and modules are rather large, this method wouldn't be practical in those cases.
+
+ES6 gives us a very handy tool known as `import`. Now, we can choose the parts of a module or file to load into a given file, saving time and memory.
+
+Note:
+In most cases, the file path requires a `./` before it; otherwise, node will look in the `node_modules` directory first trying to load it as a dependency.
+___
+
+### 
+
+
+
+
+
+
 
 
 
