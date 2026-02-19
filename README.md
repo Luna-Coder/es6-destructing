@@ -19,7 +19,7 @@ ___
 ### Rest Operator With Function Parameters
 ```js
 function howMany(...args) {
-  return "You have passed " + args.length + " arguments.";
+    return "You have passed " + args.length + " arguments.";
 }
 
 console.log(howMany(0, 1, 2));                            // You have passed 3 arguments
@@ -51,10 +51,10 @@ ___
 ### Destructuring Assignment To Assign Variables From Objects
 ```js
 let student = { 
-                fname: "Erik", 
-                lname: "Carr", 
-                idNum: 1234 
-              };
+    fname: "Erik",
+    lname: "Carr", 
+    idNum: 1234
+};
 ```
 
 ES5
@@ -112,8 +112,8 @@ ___
 ### Destructuring Assignment To Pass An Object As A Function's Parameters
 ```js
 const profileUpdate = (profileData) => {
-  const { name, age, nationality, location } = profileData;
-  // do something with these variables
+    const { name, age, nationality, location } = profileData;
+    // do something with these variables
 }
 ```
 In some cases, you can destructure the object in a function argument itself.
@@ -121,7 +121,7 @@ In some cases, you can destructure the object in a function argument itself.
 This effectively destructures the object sent into the function. This can also be done _in-place_.
 ```js
 const profileUpdate = ({ name, age, nationality, location }) => {
-  /* do something with these fields */
+    /* do something with these fields */
 }
 ```
 This removes some extra lines and makes our code look neat.
@@ -133,8 +133,8 @@ ___
 ###  Strings Using Template Literals
 ```js
 const person = {
-  name: "Zodiac Hasbro",
-  age: 56
+    name: "Zodiac Hasbro",
+    age: 56
 };
 
 // Template literal with multi-line and string interpolation
@@ -155,8 +155,8 @@ ___
 ES5
 ```js
 const getMousePosition = (x, y) => ({
-  x: x,
-  y: y
+    x: x,
+    y: y
 });
 ```
 ES6 adds some nice support for easily defining object literals.
@@ -174,10 +174,11 @@ ___
 ES5
 ```js
 const person = {
-  name: "Taylor",
-  sayHello: function() {
-    return `Hello! My name is ${this.name}.`;
-  }
+    name: "Taylor",
+
+    sayHello: function() {
+      return `Hello! My name is ${this.name}.`;
+    }
 };
 ```
 With ES6, You can remove the `function` keyword and colon altogether when defining functions in objects. Here's an example of this syntax:
@@ -185,10 +186,11 @@ With ES6, You can remove the `function` keyword and colon altogether when defini
 ES6
 ```js
 const person = {
-  name: "Taylor",
-  sayHello() {
-    return `Hello! My name is ${this.name}.`;
-  }
+    name: "Taylor",
+
+    sayHello() {
+      return `Hello! My name is ${this.name}.`;
+    }
 };
 ```
 
@@ -198,7 +200,7 @@ ___
 ES5
 ```js
 var SpaceShuttle = function(targetPlanet){
-  this.targetPlanet = targetPlanet;
+    this.targetPlanet = targetPlanet;
 }
 var zeus = new SpaceShuttle('Jupiter');
 ```
@@ -213,10 +215,11 @@ The `class` syntax simply replaces the constructor function creation.
 ES6
 ```js
 class SpaceShuttle {
-  constructor(targetPlanet){
-    this.targetPlanet = targetPlanet;
-  }
+    constructor(targetPlanet){
+      this.targetPlanet = targetPlanet;
+    }
 }
+
 const zeus = new SpaceShuttle('Jupiter');
 ```
 Notice that the `class` keyword declares a new function, and a `constructor` was added, which would be invoked when `new` is called - to create a new object.
@@ -231,7 +234,7 @@ In ES5, the function `require()` was used to import the functions and code in ex
 
 ES6 gives us a very handy tool known as `import`. Now, we can choose the parts of a module or file to load into a given file, saving time and memory.
 
-Note:
+**Note:**
 In most cases, the file path requires a `./` before it; otherwise, node will look in the `node_modules` directory first trying to load it as a dependency.
 
 ___
@@ -239,11 +242,11 @@ ___
 ### The export Syntax To Reuse A Code Block
 ```js
 const capitalizeString = (string) => {
-  return string.charAt(0).toUpperCase() + string.slice(1);
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-export { capitalizeString }      //How to export functions.
-export const foo = "bar";        //How to export variables.
+export { capitalizeString }      // How to export functions.
+export const foo = "bar";        // How to export variables.
 ```
 This is what we refer to as a _named export_. With this, we can import any code we export into another file with the `import` syntax.
 
@@ -252,7 +255,7 @@ When we want some code - a function, or a variable - to be usable in another fil
 If you'd like to compact all your `export` statements into one line, you can take the following approach:
 ```js
 const capitalizeString = (string) => {
-  return string.charAt(0).toUpperCase() + string.slice(1);
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 const foo = "bar";
@@ -285,7 +288,7 @@ ___
 ### Export Fallback With export default
 ```js
 export default function add(x,y) {
-  return x + y;
+    return x + y;
 }
 ```
 With a _named export_, you're allowed you to make multiple functions and variables available for use in other files.
@@ -294,7 +297,7 @@ There is another `export` syntax you need to know, known as `export default`.
 
 Usually you will use this syntax if only one value is being exported from a file. It is also used to create a fallback value for a file or module.
 
-Note: 
+**Note:**
 Since `export default` is used to declare a fallback value for a module or file, you can only have one value be a default export in each module or file. 
 
 Additionally, you cannot use `export default` with `var`, `let`, or `const`.
